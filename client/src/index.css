@@ -1,3 +1,10 @@
+/* ============================================================
+   KULOOC V3 — Design System SaaS Premium
+   Philosophie : Dark Precision + Canadian Red
+   Couleurs : Rouge #E31837 | Noir #0D0D0D | Blanc #FFFFFF
+   Typographie : Space Grotesk (display) + DM Sans (body)
+   ============================================================ */
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -42,136 +49,524 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* ============================================================
+   DARK THEME (DEFAULT) — Kulooc Premium Dark
+   ============================================================ */
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
+  --radius: 0.75rem;
+
+  /* Kulooc Brand */
+  --kulooc-red: #E31837;
+  --kulooc-red-dark: #B01229;
+  --kulooc-red-light: #FF2D4F;
+  --kulooc-black: #0D0D0D;
+  --kulooc-surface: #111111;
+  --kulooc-surface-2: #1A1A1A;
+  --kulooc-surface-3: #222222;
+
+  /* Semantic */
+  --background: oklch(0.08 0 0);
+  --foreground: oklch(0.97 0 0);
+  --card: oklch(0.11 0 0);
+  --card-foreground: oklch(0.97 0 0);
+  --popover: oklch(0.13 0 0);
+  --popover-foreground: oklch(0.97 0 0);
+  --primary: oklch(0.50 0.22 25);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.16 0 0);
+  --secondary-foreground: oklch(0.80 0 0);
+  --muted: oklch(0.16 0 0);
+  --muted-foreground: oklch(0.55 0 0);
+  --accent: oklch(0.18 0 0);
+  --accent-foreground: oklch(0.97 0 0);
+  --destructive: oklch(0.50 0.22 25);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(1 0 0 / 8%);
+  --input: oklch(1 0 0 / 10%);
+  --ring: oklch(0.50 0.22 25);
+  --chart-1: oklch(0.50 0.22 25);
+  --chart-2: oklch(0.65 0.15 25);
+  --chart-3: oklch(0.75 0.10 25);
+  --chart-4: oklch(0.55 0.18 200);
+  --chart-5: oklch(0.60 0.15 140);
+  --sidebar: oklch(0.09 0 0);
+  --sidebar-foreground: oklch(0.97 0 0);
+  --sidebar-primary: oklch(0.50 0.22 25);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.14 0 0);
+  --sidebar-accent-foreground: oklch(0.97 0 0);
+  --sidebar-border: oklch(1 0 0 / 8%);
+  --sidebar-ring: oklch(0.50 0.22 25);
+}
+
+/* ============================================================
+   LIGHT THEME — Kulooc Clean White
+   ============================================================ */
+.light {
+  --background: oklch(0.99 0 0);
+  --foreground: oklch(0.10 0 0);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
+  --card-foreground: oklch(0.10 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --popover-foreground: oklch(0.10 0 0);
+  --primary: oklch(0.50 0.22 25);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.96 0 0);
+  --secondary-foreground: oklch(0.20 0 0);
+  --muted: oklch(0.96 0 0);
+  --muted-foreground: oklch(0.50 0 0);
+  --accent: oklch(0.96 0 0);
+  --accent-foreground: oklch(0.10 0 0);
+  --destructive: oklch(0.50 0.22 25);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0 0 0 / 10%);
+  --input: oklch(0 0 0 / 8%);
+  --ring: oklch(0.50 0.22 25);
+  --sidebar: oklch(0.97 0 0);
+  --sidebar-foreground: oklch(0.10 0 0);
+  --sidebar-accent: oklch(0.93 0 0);
+  --sidebar-accent-foreground: oklch(0.10 0 0);
+  --sidebar-border: oklch(0 0 0 / 8%);
 }
 
-.dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
-}
-
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    box-sizing: border-box;
   }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   body {
     @apply bg-background text-foreground;
+    font-family: 'DM Sans', system-ui, sans-serif;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
-  [type="button"]:not(:disabled),
-  [type="submit"]:not(:disabled),
-  [type="reset"]:not(:disabled),
-  a[href],
-  select:not(:disabled),
-  input[type="checkbox"]:not(:disabled),
-  input[type="radio"]:not(:disabled) {
+  a[href] {
     @apply cursor-pointer;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.12);
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.20);
   }
 }
 
+/* ============================================================
+   KULOOC COMPONENT SYSTEM
+   ============================================================ */
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
+
+  /* Container */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
-    padding-right: 1rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
-
-  .flex {
-    min-height: 0;
-    min-width: 0;
-  }
-
   @media (min-width: 640px) {
-    .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
-      padding-right: 1.5rem;
-    }
+    .container { padding-left: 1.5rem; padding-right: 1.5rem; }
+  }
+  @media (min-width: 1024px) {
+    .container { padding-left: 2rem; padding-right: 2rem; max-width: 1320px; }
   }
 
-  @media (min-width: 1024px) {
-    .container {
-      padding-left: 2rem; /* 32px - desktop padding */
-      padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
-    }
+  .flex { min-height: 0; min-width: 0; }
+
+  /* ── Card SaaS Premium ── */
+  .kulooc-card {
+    background: var(--kulooc-surface, #111111);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
+  .kulooc-card:hover {
+    border-color: rgba(255,255,255,0.12);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  }
+  .light .kulooc-card {
+    background: #ffffff;
+    border-color: rgba(0,0,0,0.08);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+
+  /* ── Card Glass ── */
+  .kulooc-glass {
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 1rem;
+  }
+
+  /* ── Primary Button ── */
+  .kulooc-btn-primary {
+    background: #E31837;
+    color: #ffffff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: -0.01em;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.625rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .kulooc-btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .kulooc-btn-primary:hover {
+    background: #B01229;
+    box-shadow: 0 4px 20px rgba(227,24,55,0.35);
+    transform: translateY(-1px);
+  }
+  .kulooc-btn-primary:hover::before { opacity: 1; }
+  .kulooc-btn-primary:active { transform: translateY(0); }
+  .kulooc-btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+  /* ── Secondary Button ── */
+  .kulooc-btn-secondary {
+    background: transparent;
+    color: rgba(255,255,255,0.75);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.625rem;
+    border: 1px solid rgba(255,255,255,0.12);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .kulooc-btn-secondary:hover {
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(255,255,255,0.20);
+    color: #ffffff;
+  }
+
+  /* ── Input SaaS ── */
+  .kulooc-input {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 0.625rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    color: #ffffff;
+    font-family: 'DM Sans', sans-serif;
+    transition: border-color 0.15s ease, background 0.15s ease;
+    outline: none;
+  }
+  .kulooc-input::placeholder { color: rgba(255,255,255,0.25); }
+  .kulooc-input:focus {
+    border-color: rgba(227,24,55,0.50);
+    background: rgba(255,255,255,0.07);
+    box-shadow: 0 0 0 3px rgba(227,24,55,0.10);
+  }
+  .light .kulooc-input {
+    background: rgba(0,0,0,0.04);
+    border-color: rgba(0,0,0,0.12);
+    color: #0D0D0D;
+  }
+  .light .kulooc-input::placeholder { color: rgba(0,0,0,0.30); }
+  .light .kulooc-input:focus {
+    border-color: rgba(227,24,55,0.50);
+    background: rgba(0,0,0,0.02);
+  }
+
+  /* ── Badge ── */
+  .kulooc-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+    border: 1px solid;
+  }
+  .kulooc-badge-red { color: #E31837; background: rgba(227,24,55,0.10); border-color: rgba(227,24,55,0.25); }
+  .kulooc-badge-green { color: #22c55e; background: rgba(34,197,94,0.10); border-color: rgba(34,197,94,0.25); }
+  .kulooc-badge-yellow { color: #eab308; background: rgba(234,179,8,0.10); border-color: rgba(234,179,8,0.25); }
+  .kulooc-badge-blue { color: #60a5fa; background: rgba(96,165,250,0.10); border-color: rgba(96,165,250,0.25); }
+  .kulooc-badge-gray { color: rgba(255,255,255,0.50); background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); }
+
+  /* ── Status Dot ── */
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .status-dot.online { background: #22c55e; box-shadow: 0 0 0 2px rgba(34,197,94,0.25); }
+  .status-dot.offline { background: rgba(255,255,255,0.25); }
+  .status-dot.busy { background: #eab308; box-shadow: 0 0 0 2px rgba(234,179,8,0.25); }
+  .status-dot.pulse { animation: pulse-dot 2s infinite; }
+
+  /* ── Image Placeholder ── */
+  .img-placeholder {
+    background: linear-gradient(135deg, #1A1A1A 0%, #222222 100%);
+    border: 1px dashed rgba(255,255,255,0.12);
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: rgba(255,255,255,0.25);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+  }
+  .img-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255,255,255,0.015) 10px,
+      rgba(255,255,255,0.015) 20px
+    );
+  }
+
+  /* ── Sidebar Premium ── */
+  .kulooc-sidebar {
+    background: #090909;
+    border-right: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .kulooc-sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem 1rem;
+    border-radius: 0.625rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.45);
+    transition: all 0.15s ease;
+    cursor: pointer;
+    position: relative;
+    margin: 0 0.5rem;
+    text-decoration: none;
+  }
+  .kulooc-sidebar-item:hover {
+    background: rgba(255,255,255,0.05);
+    color: rgba(255,255,255,0.80);
+  }
+  .kulooc-sidebar-item.active {
+    background: rgba(227,24,55,0.12);
+    color: #E31837;
+    font-weight: 600;
+  }
+  .kulooc-sidebar-item.active::before {
+    content: '';
+    position: absolute;
+    left: -0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 60%;
+    background: #E31837;
+    border-radius: 0 2px 2px 0;
+  }
+
+  /* ── Topbar ── */
+  .kulooc-topbar {
+    height: 56px;
+    background: rgba(9,9,9,0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    align-items: center;
+    padding: 0 1.25rem;
+    gap: 1rem;
+    flex-shrink: 0;
+  }
+
+  /* ── Stat Card SaaS ── */
+  .kulooc-stat {
+    background: #111111;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 1rem;
+    padding: 1.25rem;
+    transition: all 0.2s ease;
+  }
+  .kulooc-stat:hover {
+    border-color: rgba(227,24,55,0.25);
+    box-shadow: 0 0 24px rgba(227,24,55,0.06);
+  }
+
+  /* ── GPS Navigation Bar ── */
+  .kulooc-gps-bar {
+    background: rgba(10,10,10,0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 1.25rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  }
+
+  /* ── Direction Arrow (RED) ── */
+  .kulooc-direction-arrow {
+    width: 52px;
+    height: 52px;
+    background: #E31837;
+    border-radius: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 16px rgba(227,24,55,0.40);
+  }
+
+  /* ── Ride Offer Card ── */
+  .kulooc-offer-card {
+    background: linear-gradient(135deg, #111111 0%, #161616 100%);
+    border: 1px solid rgba(227,24,55,0.20);
+    border-radius: 1.25rem;
+    box-shadow: 0 0 40px rgba(227,24,55,0.08);
+    animation: slideUp 0.3s ease;
+  }
+
+  /* ── Table SaaS ── */
+  .kulooc-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .kulooc-table th {
+    text-align: left;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.75rem 1.25rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .kulooc-table td {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.875rem;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .kulooc-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .kulooc-table tr:last-child td { border-bottom: none; }
+
+  /* ── Section Divider ── */
+  .kulooc-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+    margin: 0;
+  }
+
+  /* ── Tooltip ── */
+  .kulooc-tooltip {
+    background: #1A1A1A;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.80);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  }
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.85); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-12px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up { animation: slideUp 0.35s ease forwards; }
+.animate-slide-in { animation: slideIn 0.35s ease forwards; }
+.animate-fade-in { animation: fadeIn 0.3s ease forwards; }
+.animate-count-up { animation: countUp 0.4s ease forwards; }
+
+/* Shimmer loading skeleton */
+.kulooc-skeleton {
+  background: linear-gradient(90deg, #1A1A1A 25%, #222222 50%, #1A1A1A 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 0.5rem;
 }
