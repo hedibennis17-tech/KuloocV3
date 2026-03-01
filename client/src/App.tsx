@@ -9,6 +9,7 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { lazy, Suspense } from "react";
+import { LanguageProvider } from "./contexts/LanguageContext";
 
 // ── Pages ──────────────────────────────────────────────
 const Landing       = lazy(() => import("./pages/Landing"));
@@ -100,6 +101,7 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
+      <LanguageProvider>
       <ThemeProvider defaultTheme="dark">
         <TooltipProvider>
           <Toaster
@@ -117,6 +119,7 @@ function App() {
           <Router />
         </TooltipProvider>
       </ThemeProvider>
+      </LanguageProvider>
     </ErrorBoundary>
   );
 }
